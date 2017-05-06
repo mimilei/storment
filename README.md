@@ -1,4 +1,4 @@
 # storment
 Don't weather your storm alone.
 
-[storment informational video](https://drive.google.com/a/berkeley.edu/file/d/0Byl6uM3kdPKFWHNsRUJ3Z29xY28/view?usp=sharing)
+[storment informational video](https://youtu.be/P4hDp8nh_tQ)
