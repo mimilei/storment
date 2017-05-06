@@ -112,19 +112,18 @@ void loop() {
       Serial.println("lightning strike");
       int led = random(NUM_LEDS);
       for (int i = 0; i < 10; i++) {
-        // Use this line to keep the lightning focused in one LED.
-        if (random(2) == 0) {
-          // double strike
-        } else {
+        lightningStrike(random(NUM_LEDS));
+//        if (random(2) == 0) {
+          // TODO: double strike
+//        } else {
           // lightningStrike(led):
-          // Use this line if you want the lightning to spread out among multiple LEDs.
-          lightningStrike(random(NUM_LEDS));
-        }
+//          lightningStrike(random(NUM_LEDS));
+//        }
       }
-      chance = 2;
-      // Once there's been one strike, I make it more likely that there will be a second.
-      // int min_elapsed = (int) ((millis() - startTime) / 60000.);
-      // chance = (int) map(min_elapsed, 0, 15, 15, 1);
+      // Frequency of strikes is proportional to number of minutes door has been closed
+      // Currently assumed that the longest someone will wear the helmet is 15 minutes
+      int min_elapsed = (int) ((millis() - startTime) / 60000.);
+      chance = (int) map(min_elapsed, 0, 15, 15, 1);
 //      Serial.print("chance = ");
 //      Serial.println(chance);
     }
