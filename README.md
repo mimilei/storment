@@ -1,2 +1,2 @@
 # storment
-What if we could visualize depression?
+Don't weather your storm alone.
